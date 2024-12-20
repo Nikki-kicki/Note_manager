@@ -1,19 +1,35 @@
 
+# создание доп. заголовков
+print('Добавтье до 3-ех ключевых слов(ничего не вводите для пропуска)')
 
-print('Добавтье до 3-ех ключевых слов')
+num = 0
+key_list = []
 
+while num < 3:
+    key_title1 = input(f'Основные темы')
+    if key_title1 == '' or key_title1 ==' ':
+        num += 1
+        key_title3 = None
+    else:
+        num += 1
+        key_list.append(key_title1)
+    key_title2 = input(f'Персонажи')
+    if key_title2 == '' or key_title1 ==' ':
+        num += 1
+        key_title3 = None
+    else:
+        num += 1
+        key_list.append(key_title2)
+    key_title3 = input(f'Рекомендации для чтения')
+    if key_title3 == '' or key_title1 ==' ':
+        num += 1
+        key_title3 = None
+    else:
+        num += 1
+        key_list.append(key_title3)
+        print('Добавлено максимальное количество ключевых слов')
+        print('Это ваши заголовки:')
 
-key_title1 = input()
-if key_title1:
-    print('Добавим еще?')
-    key_title2 = input()
-    if key_title2:
-        print('И еще одно')
-        key_title3 = input()
-        if key_title3:
-            print('Добавлено максимальное количество ключевых слов')
-
-key_list = [key_title1,key_title2,key_title3]
-
-print('Это ваши ключевые слова:')
-print(key_list)
+print('Основные темы:',key_title1)
+print('Персонажи:',key_title2)
+print('Рекомендации для чтения:',key_title3)
