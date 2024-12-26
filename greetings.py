@@ -1,8 +1,9 @@
+
 # переменные
 
-username = print('Пользователь',)
-title = print('Заголовок заметки')
-content = print('Описание заметки')
-status = print('Статус заметки')
-created_date = print('Дата создания заметки')
-issue_date = print('Дата истечения заметки')
+username = 'Пользователь '
+title = 'Заголовок '
+content = 'Описание заметки '
+status = 'Статус '
+created_date = 'Дата создания '
+issue_date = 'Дата завершения '
