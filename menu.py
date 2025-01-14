@@ -12,14 +12,14 @@ note1 = {
     'content': 'Купить продукты',
     'status': 'новая',
     'created_date': datetime.strftime(datetime.today(),'%d-%m-%Y'),
-    'issue_date': '30-11-2024'}
+    'issue_date': '30-11-2025'}
 note2 = {
     'username' : 'Анастасия',
     'title' : 'Домашнее задание',
     'content' : 'Создать функцию обновления данных заметки',
     'status' : 'В процессе',
     'created_date' : datetime.strftime(datetime.today(),'%d-%m-%Y'),
-    'issue_date' : 'Дата завершения'}
+    'issue_date' : '12-10-26'}
 
 
 print('Вас приветствует менеджер заметок\nВыберите необходимое действие!')
@@ -30,30 +30,31 @@ print('1. Создать новую заметку'
       '5. Найти заметки'
       '6. Выйти из программы')
 
+choice = int(input('Введите число: '))
 
 while True:
     try:
-        choise = int(input())
-        if choise == 1:
+        choice = int(input('Введите число: '))
+        if choice == 1:
             create_note()
             continue
-        elif choise == 2:
+        elif choice == 2:
             print(notes_list)
             continue
-        elif choise == 3:
+        elif choice == 3:
             update_note()
             continue
-        elif choise == 4:
+        elif choice == 4:
             delete_note()
             continue
-        elif choise == 5:
+        elif choice == 5:
             notes = input('Введите заголовок\n')
             search_notes(notes)
             continue
-        elif choise == 6:
+        elif choice == 6:
             print('Хорошо, мы закончили')
             break
         else:
-            print(f'Пожалуйста введите число для необходимого действия. Ваш выбор: ',{choise})
+            print(f'Пожалуйста введите число для необходимого действия. Ваш выбор: ', {choice})
     except ValueError:
         print('Пожалуйста введите число')

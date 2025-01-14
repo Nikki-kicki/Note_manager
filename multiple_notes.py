@@ -19,7 +19,7 @@ while True:
             print(notes_list)
             delete = str(input('Удалить?(да или нет)\n').lower())
             if delete == 'lf' or delete == 'да':
-                notes_list.clear()
+                notes_list.remove(delete_from_titel)
                 break
             else:
                 break
@@ -51,21 +51,21 @@ while True:
         key_list = []
 
         while num < 3:
-            key_title1 = input(f'Основные темы ')
+            key_title1 = input('Основные темы ')
             if key_title1 == '' or key_title1 == ' ':
                 num += 1
                 key_title1 = None
             else:
                 num += 1
                 key_list.append(key_title1)
-            key_title2 = input(f'Персонажи ')
+            key_title2 = input('Персонажи ')
             if key_title2 == '' or key_title2 == ' ':
                 num += 1
                 key_title2 = None
             else:
                 num += 1
                 key_list.append(key_title2)
-            key_title3 = input(f'Рекомендации для чтения ')
+            key_title3 = input('Рекомендации для чтения ')
             if key_title3 == '' or key_title3 == ' ':
                 num += 1
                 key_title3 = None
@@ -93,7 +93,7 @@ while True:
         while True:  # цикл перезаписи значения для status
             try:
                 status_changer = abs(int(input()))
-                if status_changer == 1 and status_changer != '' or ' ':  # вариант для значения 1
+                if status_changer == 1 and status_changer != '' or status_changer != ' ':  # вариант для значения 1
                     status = 'Выполнено'
                     print('Статус изменен на: ', status)
                     status_accept = str(input('Изменить статус заметки(да / нет)?\n').lower())  # уточнение для изменения статуса
@@ -109,7 +109,7 @@ while True:
                                 '3 - Отложено\n')
                     except:
                         print('Пожалуйста, введите да или нет')
-                elif status_changer == 2 and status_changer != '' or ' ':  # вариант для значения 2
+                elif status_changer == 2 and status_changer != '' or status_changer != ' ':  # вариант для значения 2
                     status = 'В процессе'
                     print('Статус изменен на: ', status)
                     status_accept = str(input('Изменить статус заметки(да / нет)?\n').lower())
@@ -125,7 +125,7 @@ while True:
                                 '3 - Отложено\n')
                     except:
                         print('Пожалуйста, введите да или нет')
-                elif status_changer == 3 and status_changer != '' or ' ':  # вариант для значения 3
+                elif status_changer == 3 and status_changer != '' or status_changer != ' ':  # вариант для значения 3
                     status = 'Отложено'
                     print('Статус изменен на: ', status)
                     status_accept = str(input('Изменить статус заметки(да / нет)?\n').lower())
